@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: msha
+    description: MSHA open government data, loaded as text by the msha_ingestion DAG
+    schema: raw
+    tables:
+      - name: msha_mines
+        description: One row per mine tracked by MSHA
+      - name: msha_accidents
+        description: One row per reported accident, injury or illness
+      - name: msha_employment_production_quarterly
+        description: Hours worked and production per mine per quarter

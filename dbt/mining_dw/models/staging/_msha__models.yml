@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: stg_msha__mines
+    description: One row per mine, with clean names and a numeric mine_id
+    columns:
+      - name: mine_id
+        description: MSHA-assigned mine ID, the key that joins every MSHA data set
+        data_tests:
+          - unique
+          - not_null
+      - name: mine_name
+        description: Current name of the mine
+      - name: mine_status
+        description: Current status, for example Active or Abandoned
+      - name: state_code
+        description: Two-letter US state code
