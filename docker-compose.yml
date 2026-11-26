@@ -1,6 +1,9 @@
 x-airflow-common: &airflow-common
   build: ./airflow
   image: mining-bi-airflow:latest
+  env_file:
+    - .env
+
   environment: &airflow-env
     AIRFLOW__CORE__EXECUTOR: LocalExecutor
     AIRFLOW__CORE__AUTH_MANAGER: airflow.providers.fab.auth_manager.fab_auth_manager.FabAuthManager
@@ -15,6 +18,7 @@ x-airflow-common: &airflow-common
     AIRFLOW_CONN_MINING_DW: postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}
     DESTINATION__POSTGRES__CREDENTIALS: postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}
     PYTHONPATH: /opt/airflow
+    DBT_PROFILES_DIR: /opt/airflow/dbt/mining_dw
   volumes:
     - ./airflow/dags:/opt/airflow/dags
     - ./airflow/logs:/opt/airflow/logs
@@ -22,6 +26,7 @@ x-airflow-common: &airflow-common
     - ./airflow/plugins:/opt/airflow/plugins
     - ./ingestion:/opt/airflow/ingestion
     - ./data:/opt/airflow/data
+    - ./dbt:/opt/airflow/dbt
   user: "${AIRFLOW_UID:-50000}:0"
   depends_on: &airflow-depends-on
     postgres:

@@ -13,3 +13,8 @@ __pycache__/
 airflow/logs/
 airflow/config/airflow.cfg
 .vscode/
+
+# dbt generated files
+dbt/**/target/
+dbt/**/dbt_packages/
+dbt/**/logs/

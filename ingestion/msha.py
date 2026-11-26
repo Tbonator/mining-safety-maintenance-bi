@@ -5,7 +5,7 @@ MSHA publishes each data set as a ZIP holding one pipe-delimited (|) text file.
 The files are full extracts (every row, every week), so each load replaces the table.
 """
 
-import csv
+# import csv
 import os
 import zipfile
 from datetime import date
@@ -61,7 +61,7 @@ def read_pipe_file(txt_path: Path):
         sep="|",
         dtype=str,              # keep everything as text in raw; dbt casts types later
         encoding="latin-1",     # safe choice: latin-1 can decode any byte, so odd characters never crash the load
-        quoting=csv.QUOTE_NONE, # treat " as a normal character, since free-text fields can contain stray quotes
+        # quoting=csv.QUOTE_NONE, # treat " as a normal character, since free-text fields can contain stray quotes
         keep_default_na=False,  # keep blanks as blanks, don't guess at NULLs
         chunksize=CHUNK_ROWS,
     )
