@@ -1,0 +1,10 @@
+# Secrets: never upload
+.env
+
+# Downloaded or generated data
+data/raw/*
+!data/raw/.gitkeep
+
+# Python
+__pycache__/
+.venv/
