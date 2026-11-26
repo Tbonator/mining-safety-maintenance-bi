@@ -1,0 +1,4 @@
+dlt[postgres]
+pandas
+pyarrow
+requests
