@@ -2,16 +2,52 @@ version: 2
 
 models:
   - name: stg_msha__mines
-    description: One row per mine, with clean names and a numeric mine_id
+    description: One row per mine tracked by MSHA, renamed and typed
     columns:
       - name: mine_id
         description: MSHA-assigned mine ID, the key that joins every MSHA data set
         data_tests:
           - unique
           - not_null
-      - name: mine_name
-        description: Current name of the mine
-      - name: mine_status
-        description: Current status, for example Active or Abandoned
-      - name: state_code
-        description: Two-letter US state code
+      - name: coal_metal_ind
+        description: C for coal mines, M for metal/non-metal mines
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ["C", "M"]
+      - name: latitude
+        description: Latitude in decimal degrees
+      - name: longitude
+        description: Longitude in decimal degrees
+
+  - name: stg_msha__accidents
+    description: One row per accident, injury or illness report
+    columns:
+      - name: document_no
+        description: MSHA document number for the report
+        data_tests:
+          - not_null
+          - unique
+      - name: mine_id
+        description: Mine where the accident happened
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_msha__mines')
+                field: mine_id
+      - name: days_lost
+        description: Days away from work. NULL when not reported
+      - name: accident_date
+        description: Date of the accident
+
+  - name: stg_msha__employment_production_quarterly
+    description: One row per mine, subunit and calendar quarter
+    columns:
+      - name: mine_id
+        data_tests:
+          - not_null
+      - name: hours_worked
+        description: Total employee hours in the quarter
+      - name: coal_production_tons
+        description: Coal produced in the quarter, in short tons. NULL or 0 for metal/non-metal mines
