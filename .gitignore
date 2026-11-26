@@ -8,3 +8,8 @@ data/raw/*
 # Python
 __pycache__/
 .venv/
+
+# Airflow runtime files
+airflow/logs/
+airflow/config/airflow.cfg
+.vscode/
