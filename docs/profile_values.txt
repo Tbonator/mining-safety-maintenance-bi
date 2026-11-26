@@ -1,0 +1,177 @@
+accident_type|Over-exertion NEC|33332
+accident_type|Struck by... NEC|32124
+accident_type|Accident type, without injuries|30657
+accident_type|Struck by falling object|24174
+accident_type|Over-exertion in lifting objects|18085
+accident_type|Caught in, under or between a moving and a stationary object|18071
+accident_type|Struck against stationary object|15431
+accident_type|Fall to the walkway or working surface|12801
+accident_type|Struck against a moving object|11937
+accident_type|Struck by flying object|11077
+accident_type|Caught in, under or between NEC|8333
+accident_type|Fall onto or against objects|8144
+accident_type|Over-exertion in pulling or pushing objects|7678
+accident_type|Fall from machine|7648
+accident_type|NEC|4922
+accident_type|Absorption of radiations, caustics, toxic and noxious substances|4595
+accident_type|Contact with hot objects or substances|3476
+accident_type|Inhalation of radiations, caustics, toxic and noxious substances|3038
+accident_type|No Value Found|2110
+accident_type|Bodily reaction, NEC|1998
+accident_type|Caught in, under or between running or meshing objects|1785
+accident_type|Fall from ladders|1770
+accident_type|Over-exertion in wielding or throwing objects|1638
+accident_type|Fall down stairs|1358
+accident_type|Struck by rolling or sliding object|1344
+accident_type|Fall to lower level, NEC|1216
+accident_type|Struck by powered moving object|1047
+accident_type|Contact with heat|947
+accident_type|Unclassified, insufficient data|924
+accident_type|Rubbed or abraded|838
+accident_type|Flash burns (welding)|749
+accident_type|Fall from scaffolds, walkways, platforms|687
+accident_type|Contact with electrical current|671
+accident_type|Flash burns (electric)|617
+accident_type|Caught in, under or between two or more moving objects|312
+accident_type|Fall from piled material|114
+accident_type|Drowning|84
+accident_type|Struck by concussion|79
+accident_type|Caught in, under or between collapsing material or buildings|74
+accident_type|Contact with cold|33
+accident_type|Fall down raise, shaft or manway|32
+accident_type|Fall from headframe, derrick or tower|29
+accident_type|Ingestion of radiations, caustics, toxic and noxious substances|25
+accident_type|Fall on save level, NEC|7
+accident_type|Contact with cold objects or substances|2
+classification|HANDLING OF MATERIALS|79367
+classification|SLIP OR FALL OF PERSON|47062
+classification|HANDTOOLS (NONPOWERED)|29036
+classification|MACHINERY|28139
+classification|FALL OF ROOF OR BACK|27513
+classification|POWERED HAULAGE|20253
+classification|OTHER|7854
+classification|DISORDERS (REPEATED TRAUMA)|6098
+classification|HOISTING|5419
+classification|STEPPING OR KNEELING ON OBJECT|3796
+classification|STRIKING OR BUMPING|2517
+classification|FIRE|2386
+classification|FALL OF FACE/RIB/PILLAR/SIDE/HIGHWALL|2384
+classification|DUST DISEASE OF LUNGS|2308
+classification|NO VALUE FOUND|2106
+classification|ELECTRICAL|1661
+classification|IGNITION OR EXPLOSION OF GAS OR DUST|1422
+classification|EXPLODING VESSELS UNDER PRESSURE|1130
+classification|DISORDERS (PHYSICAL AGENTS)|1017
+classification|FALLING/SLIDING/ROLLING MATERIALS|1008
+classification|ENTRAPMENT|855
+classification|ALL OTHER OCCUPATIONAL ILLNESSES|684
+classification|NONPOWERED HAULAGE|623
+classification|INUNDATION|530
+classification|OCCUPATIONAL SKIN DISEASES|310
+classification|EXPLOSIVES AND BREAKING AGENTS|229
+classification|POISONING (TOXIC MATERIALS)|141
+classification|RESPIRATORY CONDITIONS (TOXIC AGENTS)|96
+classification|IMPOUNDMENT|69
+degree_of_injury|DAYS AWAY FROM WORK ONLY|89307
+degree_of_injury|NO DYS AWY FRM WRK,NO RSTR ACT|71910
+degree_of_injury|DAYS RESTRICTED ACTIVITY ONLY|43734
+degree_of_injury|ACCIDENT ONLY|30657
+degree_of_injury|DYS AWY FRM WRK & RESTRCTD ACT|20902
+degree_of_injury|OCCUPATNAL ILLNESS NOT DEG 1-6|10649
+degree_of_injury|PERM TOT OR PERM PRTL DISABLTY|2491
+degree_of_injury|ALL OTHER CASES (INCL 1ST AID)|2096
+degree_of_injury|INJURIES DUE TO NATURAL CAUSES|1558
+degree_of_injury|FATALITY|1223
+degree_of_injury|NO VALUE FOUND|910
+degree_of_injury|INJURIES INVOLVNG NONEMPLOYEES|576
+equipment_type|NO VALUE FOUND|152330
+equipment_type|Hand tools (not powered)|28430
+equipment_type|Rock or roof bolting machine, Pinning machine, Truss bolter|8954
+equipment_type|Ore haulage trucks - off highway trucks|8946
+equipment_type|Front-end loader, Tractor-shovel, Payloader, Highlift, Skip loader|7915
+equipment_type|Hand tools (powered)|6305
+equipment_type|Elevator, Skip, Cage, Buckets, Mancage, Slope car|6235
+equipment_type|Conveyor, Belt feeder, Stage loader, Hopper shaker, Belt structure|4574
+equipment_type|Bulldozer, Dozer, Crawler tractor, Push cat|4261
+equipment_type|Trucks, Service truck, Utility truck, Pickup, Water truck, Fuel truck|4119
+equipment_type|Welding machine, Torch, Cutting torch, Arc welder, Air arc|3726
+equipment_type|Shovel, Power shovel, Backhoe, Trackhoe, Dragline - Big Muskie|3715
+equipment_type|Continuous miner, Tunnel borer, Road header|3408
+equipment_type|Load-haul-dump, Scoop tram, Transloader, Unitrac, S&S Battery|3350
+equipment_type|Mancar, Mantrip, Personnel carrier, Porta bus, Jeep, Jitney, ATV|3124
+equipment_type|Crusher, Breaker, Mills (ball and rod), Feeder breaker|2446
+equipment_type|Forklift, Plant cat, Telehandler, Hyster, Lift truck, Skid steer|1930
+equipment_type|Shuttle car, Buggy, Ram car, Young buggy, Teletram car|1927
+equipment_type|Machine, NEC - Wheelbarrow, Well drilling Rig, Post hole auger|1629
+equipment_type|Carriage-mounted drills, Rail, Rubber-tired, Jumbo, Air-track drill|1585
+equipment_type|Rock drill, Jackleg, Airleg, Drifter, Stoper, Buzzy, Jackhammer|1545
+equipment_type|Milling machinery, Block press, Ballast machine|1493
+equipment_type|Crane, Cherry picker, Lift basket, Scissor truck, Boom truck|1421
+equipment_type|Screen, Vibrator, Shaker, Rock screener, Scalper|1345
+equipment_type|Pump, Slurry pump, Sump pump|911
+equipment_type|Bench grinder, Drill press, Band/Table saw, Sandblaster|662
+equipment_type|Locomotive, (motor) - rail-mounted (Battery, Steam, Electric, Air)|658
+equipment_type|Longwall machine|618
+equipment_type|Packaging machine, Bagger, Sewing machine, Palletizer|587
+equipment_type|Man lift, Lift basket, Basket scaler, Self-propelled hydraulic boom|550
+equipment_type|Road grader, Motor grader, Motor patrol, Grader, Road scraper|524
+equipment_type|Scraper loader, Tractor scraper, Pan scraper, Elevating scraper|516
+equipment_type|Dimension stone machinery, Gangwire saw, Guillotine, Hydrosplit|490
+equipment_type|Ore haulage trucks -  on highway trucks|474
+equipment_type|Hoist, Car dropper, Hydraulic jack, Mine car retriever, Condor|467
+equipment_type|Longwall subparts, Duke, Dowdy jack, Ramjack, Longwall shield|446
+equipment_type|Auger machine, Highwall miner, Auger highwall drill, Auger drill|400
+equipment_type|Blow pipe, Blow gun, Air lance|394
+equipment_type|Tractor, Supply car|356
+equipment_type|Mine car, Ore or coal car, Boxcar, Hopper car|346
+equipment_type|Pneumatic blasting agent loader, Driller loader, Prill loader|250
+equipment_type|Chute|227
+equipment_type|Air compressor|219
+equipment_type|Dredge|213
+equipment_type|Boats, Barges, Other water transportation|212
+equipment_type|Tugger, Air winch, Air hoist, Air jack, Electric winch|208
+equipment_type|Fan|198
+equipment_type|Mucking machine, Overshot loader, Cryderman|193
+equipment_type|Rock dusting machine, Trickle duster|171
+equipment_type|Mill, Grinding (Rod, Ball, Autogenous, Pug, Hammer)|156
+equipment_type|Mine car, Timber truck, Nipper truck|119
+equipment_type|Washers|97
+equipment_type|Track equipment, Re-railer, 335 track shifter, Track jack|84
+equipment_type|Impactor|69
+equipment_type|Electric drills, Coal drills|67
+equipment_type|Gunite machine, Shotcrete|66
+equipment_type|Cutting machine, Chain cutter|64
+equipment_type|Grizzlies for coarse screening, Scalping or skimming of bulk material|57
+equipment_type|Classifier, Screw classifer, Spirial classifier, Cyclone classifier|48
+equipment_type|Flotation and filters|45
+equipment_type|Raw coal storage, Tipple, Dump bins|38
+equipment_type|Gathering arm loader, Conway loader, Coal loading machine|31
+equipment_type|Hydraulic jets, Monitor|13
+equipment_type|Air transportation, Planes, Helicopter|13
+equipment_type|Slusher, Scraper hoist, Slusher hoist|12
+equipment_type|Raise borer, Raise drill|10
+equipment_type|Raise climber|8
+equipment_type|Aerial tram, Tramway|6
+equipment_type|Tamping machine|4
+equipment_type|Rotary dump, Dump rail|3
+mine_status|Abandoned|69625
+mine_status|Abandoned and Sealed|8823
+mine_status|Active|6671
+mine_status|Intermittent|5395
+mine_status|Temporarily Idled|952
+mine_status|NonProducing|368
+mine_status|New Mine|295
+mine_type|Surface|68969
+mine_type|Underground|17406
+mine_type|Facility|5559
+mine_type||195
+subunit|STRIP, QUARY, OPEN PIT|1200626
+subunit|OFFICE WORKERS AT MINE SITE|1028698
+subunit|MILL OPERATION/PREPARATION PLANT|298715
+subunit|UNDERGROUND|79294
+subunit|DREDGE|78896
+subunit|SURFACE AT UNDERGROUND|69394
+subunit|AUGER|12123
+subunit|CULM BANK/REFUSE PILE|10115
+subunit|INDEPENDENT SHOPS OR YARDS|5279
+subunit|OTHER MINING|1388
