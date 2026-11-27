@@ -1,0 +1,18 @@
+version: 2
+
+seeds:
+  - name: equipment_groups
+    description: >
+      Maps each MSHA equipment type to one of 13 equipment groups.
+      Shared later with the synthetic maintenance data, so both sources use the same groups.
+    columns:
+      - name: equipment_type
+        description: MSHA equipment type, exactly as it appears in the accidents data
+        data_tests:
+          - unique
+          - not_null
+      - name: equipment_group
+        data_tests:
+          - not_null
+      - name: is_mobile_equipment
+        description: True for vehicles and mobile plant (trucks, loaders, dozers, shovels, underground haulage)

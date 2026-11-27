@@ -5,6 +5,7 @@ profile: mining_dw
 model-paths: ["models"]
 macro-paths: ["macros"]
 test-paths: ["tests"]
+seed-paths: ["seeds"]
 
 clean-targets: ["target", "dbt_packages"]
 
@@ -13,3 +14,15 @@ models:
     staging:
       +schema: staging
       +materialized: view
+    intermediate:
+      +schema: intermediate
+      +materialized: view
+
+seeds:
+  mining_dw:
+    +schema: staging
+    equipment_groups:
+      +column_types:
+        equipment_type: text
+        equipment_group: text
+        is_mobile_equipment: boolean

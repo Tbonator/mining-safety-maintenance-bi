@@ -1,0 +1,70 @@
+equipment_type,equipment_group,is_mobile_equipment
+Ore haulage trucks - off highway trucks,Haul trucks,true
+Ore haulage trucks -  on highway trucks,Haul trucks,true
+"Front-end loader, Tractor-shovel, Payloader, Highlift, Skip loader",Loaders and LHDs,true
+"Load-haul-dump, Scoop tram, Transloader, Unitrac, S&S Battery",Loaders and LHDs,true
+"Scraper loader, Tractor scraper, Pan scraper, Elevating scraper",Loaders and LHDs,true
+"Mucking machine, Overshot loader, Cryderman",Loaders and LHDs,true
+"Gathering arm loader, Conway loader, Coal loading machine",Loaders and LHDs,true
+"Bulldozer, Dozer, Crawler tractor, Push cat",Dozers and graders,true
+"Road grader, Motor grader, Motor patrol, Grader, Road scraper",Dozers and graders,true
+"Shovel, Power shovel, Backhoe, Trackhoe, Dragline - Big Muskie",Shovels and excavators,true
+Dredge,Shovels and excavators,true
+"Rock or roof bolting machine, Pinning machine, Truss bolter",Drills and bolters,false
+"Carriage-mounted drills, Rail, Rubber-tired, Jumbo, Air-track drill",Drills and bolters,false
+"Rock drill, Jackleg, Airleg, Drifter, Stoper, Buzzy, Jackhammer",Drills and bolters,false
+"Electric drills, Coal drills",Drills and bolters,false
+"Raise borer, Raise drill",Drills and bolters,false
+"Auger machine, Highwall miner, Auger highwall drill, Auger drill",Drills and bolters,false
+"Pneumatic blasting agent loader, Driller loader, Prill loader",Drills and bolters,false
+"Continuous miner, Tunnel borer, Road header",Continuous and longwall miners,false
+Longwall machine,Continuous and longwall miners,false
+"Longwall subparts, Duke, Dowdy jack, Ramjack, Longwall shield",Continuous and longwall miners,false
+"Cutting machine, Chain cutter",Continuous and longwall miners,false
+"Hydraulic jets, Monitor",Continuous and longwall miners,false
+"Shuttle car, Buggy, Ram car, Young buggy, Teletram car",Underground haulage,true
+"Locomotive, (motor) - rail-mounted (Battery, Steam, Electric, Air)",Underground haulage,true
+"Mine car, Ore or coal car, Boxcar, Hopper car",Underground haulage,true
+"Mine car, Timber truck, Nipper truck",Underground haulage,true
+"Track equipment, Re-railer, 335 track shifter, Track jack",Underground haulage,true
+"Rotary dump, Dump rail",Underground haulage,true
+"Trucks, Service truck, Utility truck, Pickup, Water truck, Fuel truck",Light vehicles and support,true
+"Mancar, Mantrip, Personnel carrier, Porta bus, Jeep, Jitney, ATV",Light vehicles and support,true
+"Forklift, Plant cat, Telehandler, Hyster, Lift truck, Skid steer",Light vehicles and support,true
+"Tractor, Supply car",Light vehicles and support,true
+"Boats, Barges, Other water transportation",Light vehicles and support,true
+"Air transportation, Planes, Helicopter",Light vehicles and support,true
+"Elevator, Skip, Cage, Buckets, Mancage, Slope car",Hoisting and lifting,false
+"Hoist, Car dropper, Hydraulic jack, Mine car retriever, Condor",Hoisting and lifting,false
+"Crane, Cherry picker, Lift basket, Scissor truck, Boom truck",Hoisting and lifting,false
+"Man lift, Lift basket, Basket scaler, Self-propelled hydraulic boom",Hoisting and lifting,false
+"Tugger, Air winch, Air hoist, Air jack, Electric winch",Hoisting and lifting,false
+"Slusher, Scraper hoist, Slusher hoist",Hoisting and lifting,false
+Raise climber,Hoisting and lifting,false
+"Aerial tram, Tramway",Hoisting and lifting,false
+"Conveyor, Belt feeder, Stage loader, Hopper shaker, Belt structure",Conveyors and chutes,false
+Chute,Conveyors and chutes,false
+"Raw coal storage, Tipple, Dump bins",Conveyors and chutes,false
+"Crusher, Breaker, Mills (ball and rod), Feeder breaker",Processing plant,false
+"Milling machinery, Block press, Ballast machine",Processing plant,false
+"Mill, Grinding (Rod, Ball, Autogenous, Pug, Hammer)",Processing plant,false
+"Screen, Vibrator, Shaker, Rock screener, Scalper",Processing plant,false
+"Grizzlies for coarse screening, Scalping or skimming of bulk material",Processing plant,false
+"Classifier, Screw classifer, Spirial classifier, Cyclone classifier",Processing plant,false
+Flotation and filters,Processing plant,false
+Washers,Processing plant,false
+Impactor,Processing plant,false
+"Packaging machine, Bagger, Sewing machine, Palletizer",Processing plant,false
+"Dimension stone machinery, Gangwire saw, Guillotine, Hydrosplit",Processing plant,false
+"Pump, Slurry pump, Sump pump",Processing plant,false
+Hand tools (not powered),Hand and power tools,false
+Hand tools (powered),Hand and power tools,false
+"Welding machine, Torch, Cutting torch, Arc welder, Air arc",Hand and power tools,false
+"Bench grinder, Drill press, Band/Table saw, Sandblaster",Hand and power tools,false
+"Blow pipe, Blow gun, Air lance",Hand and power tools,false
+"Machine, NEC - Wheelbarrow, Well drilling Rig, Post hole auger",Other equipment,false
+Air compressor,Other equipment,false
+Fan,Other equipment,false
+"Rock dusting machine, Trickle duster",Other equipment,false
+"Gunite machine, Shotcrete",Other equipment,false
+Tamping machine,Other equipment,false

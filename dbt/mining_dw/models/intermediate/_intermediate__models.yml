@@ -1,0 +1,43 @@
+version: 2
+
+models:
+  - name: int_mines__classified
+    description: Mines with validated map coordinates and a simplified status group
+    columns:
+      - name: mine_id
+        data_tests:
+          - unique
+          - not_null
+      - name: is_valid_location
+        description: True when the reported coordinates fall inside the US and its territories
+      - name: map_latitude
+        description: Latitude for maps. NULL when missing or outside the valid range
+      - name: map_longitude
+        description: Longitude for maps. NULL when missing or outside the valid range
+      - name: mine_status_group
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ["Operating", "Idle", "Abandoned", "Unknown"]
+
+  - name: int_accidents__classified
+    description: Accidents with severity, injury flags, equipment group and experience band
+    columns:
+      - name: document_no
+        data_tests:
+          - unique
+          - not_null
+      - name: severity_group
+        data_tests:
+          - not_null
+      - name: equipment_group
+        description: One of 13 equipment groups, or Not recorded
+        data_tests:
+          - not_null
+
+  - name: int_employment__mine_quarter
+    description: One row per mine and calendar quarter, summed across subunits
+    columns:
+      - name: mine_id
+        data_tests:
+          - not_null
