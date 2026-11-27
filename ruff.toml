@@ -1,0 +1,11 @@
+# Python linting rules for the DAGs and ingestion code.
+line-length = 120
+target-version = "py312"
+
+[lint]
+# E/W = style errors and warnings, F = real bugs (unused imports, undefined names), I = import order
+select = ["E", "W", "F", "I"]
+
+[lint.isort]
+# Our own modules, so ruff groups them after the third-party imports
+known-first-party = ["assets", "ingestion"]
