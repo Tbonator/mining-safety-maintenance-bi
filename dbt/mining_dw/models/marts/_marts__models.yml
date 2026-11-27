@@ -58,11 +58,16 @@ models:
               arguments:
                 to: ref('dim_equipment_group')
                 field: equipment_group
+      - name: is_injury
+        description: '{{ doc("is_injury") }}'
+      - name: is_contractor_injury
+        description: '{{ doc("is_contractor_injury") }}'
 
   - name: fct_mine_quarter_safety
     description: >
       One row per mine and calendar quarter, with hours worked and accident counts.
       Use for injury rates: sum(injury_count) x 200,000 / sum(hours_worked).
+      {{ doc("injury_rate") }}
     columns:
       - name: mine_id
         data_tests:
@@ -71,8 +76,6 @@ models:
               arguments:
                 to: ref('dim_mine')
                 field: mine_id
-              config:
-                severity: warn
       - name: quarter_start_date_key
         data_tests:
           - not_null
@@ -81,16 +84,17 @@ models:
                 to: ref('dim_date')
                 field: date_key
 
-      - name: fct_national_quarter_safety
-        description: >
-          One row per calendar quarter for all US mining, with operator and contractor hours.
-          Use for industry-wide rates: sum(injury_count) x 200,000 / sum(total_hours_worked).
-        columns:
-          - name: quarter_start_date_key
-            data_tests:
-              - unique
-              - not_null
-              - relationships:
-                  arguments:
-                    to: ref('dim_date')
-                    field: date_key
+  - name: fct_national_quarter_safety
+    description: >
+      One row per calendar quarter for all US mining, with operator and contractor hours.
+      Use for industry-wide rates: sum(injury_count) x 200,000 / sum(total_hours_worked).
+      {{ doc("injury_rate") }}
+    columns:
+      - name: quarter_start_date_key
+        data_tests:
+          - unique
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_date')
+                field: date_key
