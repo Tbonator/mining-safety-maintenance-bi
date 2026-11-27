@@ -1,0 +1,85 @@
+# Runs on every pull request to main, and on every push to main.
+# Two jobs run side by side:
+#   lint: checks the Python code style and catches bugs like unused imports
+#   dbt:  builds the whole dbt project in a throwaway Postgres and runs every test
+name: CI
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install ruff
+        run: pip install ruff==0.17.6
+
+      - name: Lint Python
+        run: ruff check ingestion airflow/dags
+
+  dbt:
+    runs-on: ubuntu-latest
+
+    # A fresh Postgres 16 that exists only for this run, then is thrown away.
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: ci
+          POSTGRES_PASSWORD: ci_password
+          POSTGRES_DB: mining_dw
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U ci -d mining_dw"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+
+    # The same variables profiles.yml reads inside Docker, pointed at the CI database.
+    # This password is not a secret: the database only lives for a few minutes on GitHub's runner.
+    env:
+      DBT_HOST: localhost
+      DBT_PORT: "5432"
+      POSTGRES_USER: ci
+      POSTGRES_PASSWORD: ci_password
+      POSTGRES_DB: mining_dw
+      PGPASSWORD: ci_password
+      DBT_PROFILES_DIR: ${{ github.workspace }}/dbt/mining_dw
+
+    steps:
+      - name: Check out the code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dbt
+        run: pip install "dbt-core~=1.12.0" "dbt-postgres~=1.11.0"
+
+      - name: Make sure psql is available
+        run: which psql || (sudo apt-get update && sudo apt-get install -y postgresql-client)
+
+      - name: Create the warehouse schemas
+        run: psql -h localhost -U ci -d mining_dw -v ON_ERROR_STOP=1 -f warehouse/init/01_init.sql
+
+      - name: Load sample raw data
+        run: psql -h localhost -U ci -d mining_dw -v ON_ERROR_STOP=1 -f ci/raw_fixtures.sql
+
+      - name: dbt build (models, snapshot, seeds and tests)
+        working-directory: dbt/mining_dw
+        # The benchmark test compares with real MSHA rates, which sample data can't match
+        run: dbt build --exclude assert_rates_match_published
