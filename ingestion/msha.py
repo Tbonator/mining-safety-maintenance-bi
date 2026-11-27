@@ -22,6 +22,7 @@ DATASETS = {
     "Mines.zip": "msha_mines",
     "Accidents.zip": "msha_accidents",
     "MinesProdQuarterly.zip": "msha_employment_production_quarterly",
+    "ContractorProdQuarterly.zip": "msha_contractor_employment_production_quarterly",
 }
 
 DATA_DIR = Path(os.getenv("MSHA_DATA_DIR", "/opt/airflow/data/raw/msha"))
