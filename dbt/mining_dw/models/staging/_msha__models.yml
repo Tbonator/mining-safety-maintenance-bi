@@ -51,3 +51,12 @@ models:
         description: Total employee hours in the quarter
       - name: coal_production_tons
         description: Coal produced in the quarter, in short tons. NULL or 0 for metal/non-metal mines
+
+  - name: stg_msha__contractor_employment_production_quarterly
+    description: One row per contractor, subunit and calendar quarter. National only, no mine ID
+    columns:
+      - name: contractor_id
+        data_tests:
+          - not_null
+      - name: hours_worked
+        description: Total contractor employee hours in the quarter

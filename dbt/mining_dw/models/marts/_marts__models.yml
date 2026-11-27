@@ -1,0 +1,96 @@
+version: 2
+
+models:
+  - name: dim_date
+    description: One row per calendar day from 1980 to 2030
+    columns:
+      - name: date_key
+        description: Date as a YYYYMMDD number, the key fact tables join on
+        data_tests:
+          - unique
+          - not_null
+
+  - name: dim_mine
+    description: One row per mine, with location, status and current owner
+    columns:
+      - name: mine_id
+        data_tests:
+          - unique
+          - not_null
+      - name: commodity_type
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ["Coal", "Metal/non-metal", "Unknown"]
+
+  - name: dim_equipment_group
+    description: One row per equipment group, plus Not recorded
+    columns:
+      - name: equipment_group
+        data_tests:
+          - unique
+          - not_null
+
+  - name: fct_accidents
+    description: One row per accident report
+    columns:
+      - name: document_no
+        data_tests:
+          - unique
+          - not_null
+      - name: accident_date_key
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('dim_date')
+                field: date_key
+      - name: mine_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_mine')
+                field: mine_id
+      - name: equipment_group
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_equipment_group')
+                field: equipment_group
+
+  - name: fct_mine_quarter_safety
+    description: >
+      One row per mine and calendar quarter, with hours worked and accident counts.
+      Use for injury rates: sum(injury_count) x 200,000 / sum(hours_worked).
+    columns:
+      - name: mine_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_mine')
+                field: mine_id
+              config:
+                severity: warn
+      - name: quarter_start_date_key
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_date')
+                field: date_key
+
+      - name: fct_national_quarter_safety
+        description: >
+          One row per calendar quarter for all US mining, with operator and contractor hours.
+          Use for industry-wide rates: sum(injury_count) x 200,000 / sum(total_hours_worked).
+        columns:
+          - name: quarter_start_date_key
+            data_tests:
+              - unique
+              - not_null
+              - relationships:
+                  arguments:
+                    to: ref('dim_date')
+                    field: date_key

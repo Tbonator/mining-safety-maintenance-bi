@@ -1,0 +1,16 @@
+snapshots:
+  - name: snap_msha__mines
+    description: >
+      SCD Type 2 history of each mine's owner, operator and status.
+      A new row is added whenever one of the check_cols changes between runs.
+    relation: ref('stg_msha__mines')
+    config:
+      schema: snapshots
+      unique_key: mine_id
+      strategy: check
+      check_cols:
+        - controller_id
+        - controller_name
+        - operator_id
+        - operator_name
+        - mine_status

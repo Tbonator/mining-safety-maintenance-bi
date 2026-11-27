@@ -6,6 +6,7 @@ model-paths: ["models"]
 macro-paths: ["macros"]
 test-paths: ["tests"]
 seed-paths: ["seeds"]
+snapshot-paths: ["snapshots"]
 
 clean-targets: ["target", "dbt_packages"]
 
@@ -17,6 +18,9 @@ models:
     intermediate:
       +schema: intermediate
       +materialized: view
+    marts:
+      +schema: marts
+      +materialized: table
 
 seeds:
   mining_dw:
@@ -26,3 +30,8 @@ seeds:
         equipment_type: text
         equipment_group: text
         is_mobile_equipment: boolean
+    msha_published_rates:
+      +column_types:
+        calendar_year: integer
+        all_injury_rate: numeric
+        source: text

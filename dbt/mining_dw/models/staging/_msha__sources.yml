@@ -11,3 +11,5 @@ sources:
         description: One row per reported accident, injury or illness
       - name: msha_employment_production_quarterly
         description: Hours worked and production per mine per quarter
+      - name: msha_contractor_employment_production_quarterly
+        description: Contractor hours and production per contractor, subunit and quarter. National only, no mine ID

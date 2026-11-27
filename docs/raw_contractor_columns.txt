@@ -1,0 +1,13 @@
+1|contractor_id
+2|contractor_name
+3|cal_yr
+4|cal_qtr
+5|fiscal_yr
+6|fiscal_qtr
+7|subunit_cd
+8|subunit
+9|avg_employee_cnt
+10|hours_worked
+11|coal_production
+12|coal_metal_ind
+13|_source_file

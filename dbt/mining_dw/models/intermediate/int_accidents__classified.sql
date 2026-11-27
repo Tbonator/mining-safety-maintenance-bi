@@ -38,6 +38,10 @@ classified as (
 
         coalesce(degree_of_injury = 'FATALITY', false)     as is_fatal,
 
+        -- Contractors' employees, not the mine operator's. Their hours are only
+        -- published nationally, so per-mine rates must leave them out.
+        contractor_id is not null                          as is_contractor_injury,
+
         -- An injury to an employee: fatal, permanent disability, days away,
         -- restricted duty or medical treatment. Excludes accidents with no injury,
         -- illnesses, natural causes, non-employees and first aid.

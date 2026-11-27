@@ -16,3 +16,13 @@ seeds:
           - not_null
       - name: is_mobile_equipment
         description: True for vehicles and mobile plant (trucks, loaders, dozers, shovels, underground haulage)
+  
+      - name: msha_published_rates
+        description: >
+          All-injury rates for all US mining as published by MSHA and the Department of Labor.
+          Used to check that our pipeline's rates match the official ones.
+        columns:
+          - name: calendar_year
+            data_tests:
+              - unique
+              - not_null
